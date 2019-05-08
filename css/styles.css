@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    width: auto;
+    /* padding-top: 5%; */
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    font-size: 120px;
+    color: white;
+    margin-bottom: 2px;
+    font-family: 'Righteous', cursive;
+}
+
+@font-face {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Righteous'), local('Righteous-Regular'),
+         url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/righteous-v7-latin/righteous-v7-latin-regular.svg#Righteous') format('svg'); /* Legacy iOS */
+}
+
+table {
+    margin: 0 auto;
+    background-color: grey;
+    border-style: 5px;
+    border-style: none;
+    border-spacing: 30px;
+    border-collapse: separate;
+}
+
+td {
+    background-color: black;
+    border-radius: 25px;
+    overflow: hidden;
+    animation-name: shrink;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .30s;
+}
+
+td.clicked {
+    animation-name: grow;
+    -webkit-backface-visibility: visible !important;
+    animation-fill-mode: forwards;
+    backface-visibility: visible !important;
+	animation-duration: .30s;
+}
+
+img {
+    display: block;
+    transform: scale(1.5, 1.5);
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.1, 1.1);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+#btn {
+    text-align: center;
+    padding-top: 30px;
+    display: none;
+}
+
+#btn button {
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+#levelBtn button {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#levelBtn button:hover {
+    background-color: black;
+    color: white;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    transform: scale(2, 2);
+}
+
+.modal-button {
+    background-color: #fefefe;
+    margin: 50% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 50% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 50px;
+    text-align: center;
+}
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

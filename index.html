@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script type="text/javascript" src="js/app.js"></script>
+
+<html>
+    <head>
+        <title>Memory</title>
+    </head>
+    <body>
+        <h1>Matchy Matchy</h1>
+        <table>
+            <tbody id="grid">
+            </tbody>
+        </table>
+
+        <div id="btn">
+            <button id="changeDiff" onclick="start()">Change Difficulty</button>
+            <button id="restart" onclick="restart()">Restart</button>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Congratumalations</h2>
+              <p>You won in <span id="moves"></span> moves</p>
+              <p>and finished in <span id="time"></span> seconds!</p>
+            </div>
+        </div>
+
+        <div id="levelModal" class="modal">
+            <div class="modal-button">
+              <h2>Pick a Difficulty</h2>
+              <div id="levelBtn">
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+            </div>
+            </div>
+        </div>
+
+    </body>
+</html>
